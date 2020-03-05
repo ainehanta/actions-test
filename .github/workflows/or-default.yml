@@ -35,4 +35,4 @@ jobs:
     - name: or default
       env:
         HOGE: ${{ secrets.FUGA || 'default' }}
-      run: echo $HOGE
+      run: echo $HOGE && echo ${{ toJSON(github) }}
